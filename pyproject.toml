@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "poetry-dependencies"
+version = "0.1.0"
+description = "Simple script to try out Poetry as a dependency manager"
+authors = ["José Loarca <jloarca@ehnusa.com>"]
+readme = "README.md"
+packages = [{include = "poetry_dependencies"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+poetry-versioning = {version = "1.0.3", source = "testpypi"}
+quoters = "^0.30"
+
+
+[[tool.poetry.source]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+default = false
+secondary = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
